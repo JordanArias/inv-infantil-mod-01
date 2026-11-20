@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Jackson's 5th Birthday - Happiest Birthday On Earth</title>
+<!-- Tailwind CSS v3 with Forms Plugin -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts for Disney-inspired Typography -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&amp;family=Grandstander:wght@400;600;700;800&amp;family=Playfair+Display:ital,wght@1,600;1,700&amp;family=Quicksand:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- BEGIN: Custom Font & Aesthetic Styling -->
+<style data-purpose="typography">
+    .font-disney-display {
+      font-family: 'Grandstander', cursive, sans-serif;
+    }
+    .font-banner-title {
+      font-family: 'Playfair Display', serif;
+    }
+    .font-friendly {
+      font-family: 'Fredoka', 'Quicksand', sans-serif;
+    }
+    .font-script-custom {
+      font-family: 'Grandstander', cursive;
+      letter-spacing: 0.5px;
+    }
+  </style>
+<style data-purpose="decorative-effects">
+    /* Subtle cloud/sparkle textures and palette */
+    :root {
+      --disney-blue: #98c6eb;
+      --disney-light-blue: #cbe3f7;
+      --disney-tan: #cca16b;
+      --disney-light-tan: #eedbc5;
+      --disney-gold: #e2ba7d;
+      --disney-navy: #1f3b60;
+    }
+    
+    .bg-magical-radial {
+      background: radial-gradient(circle at 50% 18%, #ffffff 0%, #f6faff 50%, #eef5fc 100%);
+    }
+
+    .balloon-float {
+      animation: floatSlow 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatSlow {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-7px) rotate(2deg); }
+    }
+
+    .sparkle-pulse {
+      animation: pulseSparkle 2.5s infinite alternate ease-in-out;
+    }
+
+    @keyframes pulseSparkle {
+      0% { opacity: 0.35; transform: scale(0.9); }
+      100% { opacity: 0.95; transform: scale(1.1); }
+    }
+  </style>
+<!-- END: Custom Font & Aesthetic Styling -->
+</head>
+<body class="bg-slate-100 text-slate-800 flex justify-center min-h-screen selection:bg-blue-200">
+<!-- Mobile Viewport Wrapper (iPhone Viewport Simulation) -->
+<main class="w-full max-w-[428px] bg-magical-radial min-h-screen shadow-2xl relative overflow-hidden border-x border-slate-200 flex flex-col font-friendly pb-12">
+<!-- BEGIN: Top Bar & Music Control -->
+<header class="relative pt-7 px-5 pb-2 flex items-center justify-between z-20" data-purpose="top-header">
+<!-- Music floating Mickey button -->
+<button aria-label="Play or pause birthday background music" class="w-11 h-11 rounded-full bg-[#c99e69] shadow-md border-2 border-white flex items-center justify-center text-white relative hover:scale-105 active:scale-95 transition-transform" data-purpose="music-toggle" id="music-toggle-btn" title="Music Included" type="button">
+<!-- Mickey Ears Silhouettes on Button -->
+<span class="absolute -top-1.5 -left-1 w-4 h-4 bg-[#c99e69] rounded-full border border-white"></span>
+<span class="absolute -top-1.5 -right-1 w-4 h-4 bg-[#c99e69] rounded-full border border-white"></span>
+<!-- Musical Note Icon -->
+<svg class="w-5 h-5 fill-current relative z-10" viewbox="0 0 24 24">
+<path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"></path>
+</svg>
+</button>
+<!-- Music Notice Tag -->
+<div class="flex items-center gap-1.5 bg-white/80 backdrop-blur-sm border border-amber-200/80 rounded-full px-3 py-1 shadow-sm text-xs font-semibold text-[#8b612d]">
+<svg class="w-3.5 h-3.5 fill-[#cca16b]" viewbox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"></path></svg>
+<span>Music Included</span>
+</div>
+</header>
+<!-- END: Top Bar & Music Control -->
+<!-- BEGIN: Magical Hero Section -->
+<section class="relative px-4 text-center flex flex-col items-center pt-2" data-purpose="hero-section">
+<!-- Gold Castle & Fireworks Graphic -->
+<div class="relative w-full max-w-[320px] mx-auto h-[190px] flex items-end justify-center mb-1">
+<!-- Golden Fireworks SVG Left -->
+<div class="absolute left-3 top-4 text-[#dec07e] sparkle-pulse">
+<svg class="w-14 h-14" fill="currentColor" viewbox="0 0 100 100">
+<path d="M50 0 L53 38 L90 20 L60 48 L100 50 L60 52 L90 80 L53 62 L50 100 L47 62 L10 80 L40 52 L0 50 L40 48 L10 20 L47 38 Z" opacity="0.85"></path>
+</svg>
+</div>
+<!-- Golden Fireworks SVG Right -->
+<div class="absolute right-2 top-2 text-[#e3c68a] sparkle-pulse" style="animation-delay: 1.2s;">
+<svg class="w-16 h-16" fill="currentColor" viewbox="0 0 100 100">
+<path d="M50 0 L53 38 L90 20 L60 48 L100 50 L60 52 L90 80 L53 62 L50 100 L47 62 L10 80 L40 52 L0 50 L40 48 L10 20 L47 38 Z" opacity="0.9"></path>
+</svg>
+</div>
+<!-- Disney Fairy-tale Castle Silhouette & Spire Illustration -->
+<div class="relative z-10 w-44 text-[#cba26b]/90 flex flex-col items-center">
+<svg class="w-full h-auto drop-shadow-sm fill-current" viewbox="0 0 200 220">
+<!-- Center High Spire & Flag -->
+<polygon fill="#cca16b" points="100,5 94,40 106,40"></polygon>
+<path d="M100,5 L112,8 L100,12 Z" fill="#cca16b"></path>
+<rect fill="#cca16b" height="40" width="8" x="96" y="40"></rect>
+<!-- Center Turret Roof -->
+<polygon fill="#dec07e" points="100,55 75,95 125,95"></polygon>
+<!-- Side Spires -->
+<polygon fill="#cca16b" points="65,40 60,75 70,75"></polygon>
+<polygon fill="#cca16b" points="135,40 130,75 140,75"></polygon>
+<!-- Main Walls & Gate -->
+<rect fill="#d9b680" height="70" width="60" x="70" y="95"></rect>
+<rect fill="#cca16b" height="60" width="24" x="48" y="110"></rect>
+<rect fill="#cca16b" height="60" width="24" x="128" y="110"></rect>
+<!-- Outer Wall Crenellations -->
+<path d="M40,135 L40,180 L160,180 L160,135 L150,135 L150,145 L140,145 L140,135 L130,135 L130,145 L120,145 L120,135 L110,135 L110,145 L90,145 L90,135 L80,135 L80,145 L70,145 L70,135 L60,135 L60,145 L50,145 L50,135 Z" fill="#caa069"></path>
+<!-- Arched Doorway -->
+<path d="M88,180 A12,12 0 0 1 112,180 Z" fill="#ffffff"></path>
+<!-- Little Windows -->
+<rect fill="#ffffff" height="14" rx="4" width="8" x="96" y="110"></rect>
+<rect fill="#ffffff" height="11" rx="3.5" width="7" x="56" y="125"></rect>
+<rect fill="#ffffff" height="11" rx="3.5" width="7" x="137" y="125"></rect>
+</svg>
+</div>
+</div>
+<!-- "Happiest" Elegant Title -->
+<h1 class="font-banner-title text-4xl sm:text-5xl italic tracking-wide text-[#a57a46] font-bold drop-shadow-sm -mt-3 mb-1">
+        Happiest
+      </h1>
+<!-- Mickey & Gang Character Avatars Row (Mickey, Donald, Pluto, Goofy, Minnie) -->
+<div class="relative w-full max-w-[340px] px-2 flex justify-between items-end z-10 -mb-1" data-purpose="disney-character-row">
+<!-- Mickey Badge -->
+<div class="flex flex-col items-center">
+<div class="w-11 h-11 rounded-full bg-slate-900 border-2 border-white shadow-md flex items-center justify-center text-xl relative">
+<span class="absolute -top-1 -left-1 w-4 h-4 bg-slate-900 rounded-full border border-white"></span>
+<span class="absolute -top-1 -right-1 w-4 h-4 bg-slate-900 rounded-full border border-white"></span>
+            🐭
+          </div>
+</div>
+<!-- Daisy / Donald -->
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-sky-200 border-2 border-white shadow-md flex items-center justify-center text-lg">
+            🦆
+          </div>
+</div>
+<!-- Pluto -->
+<div class="flex flex-col items-center">
+<div class="w-11 h-11 rounded-full bg-amber-400 border-2 border-white shadow-md flex items-center justify-center text-xl">
+            🐶
+          </div>
+</div>
+<!-- Goofy -->
+<div class="flex flex-col items-center">
+<div class="w-11 h-11 rounded-full bg-green-500 border-2 border-white shadow-md flex items-center justify-center text-xl">
+            🎩
+          </div>
+</div>
+<!-- Minnie Badge -->
+<div class="flex flex-col items-center">
+<div class="w-11 h-11 rounded-full bg-rose-500 border-2 border-white shadow-md flex items-center justify-center text-xl relative">
+<span class="absolute -top-1 -left-1 w-4 h-4 bg-slate-900 rounded-full border border-white"></span>
+<span class="absolute -top-1 -right-1 w-4 h-4 bg-slate-900 rounded-full border border-white"></span>
+            🎀
+          </div>
+</div>
+</div>
+<!-- Birthday Banner Blocks (Baby Blue Alternating Flags) -->
+<div class="w-full max-w-[350px] grid grid-cols-8 gap-1 py-2 px-1 relative z-0" data-purpose="birthday-banner-blocks">
+<!-- B -->
+<div class="bg-[#9ec5e8] text-slate-800 font-serif font-black text-xl py-3 rounded shadow-sm border-b-2 border-blue-400">B</div>
+<!-- I -->
+<div class="bg-[#afd4f5] text-slate-800 font-serif font-black text-xl py-3 rounded shadow-sm border-b-2 border-blue-400">i</div>
+<!-- R -->
+<div class="bg-[#9ec5e8] text-slate-800 font-serif font-black text-xl py-3 rounded shadow-sm border-b-2 border-blue-400">r</div>
+<!-- T -->
+<div class="bg-[#bfe0fa] text-slate-800 font-serif font-black text-xl py-3 rounded shadow-sm border-b-2 border-blue-400">t</div>
+<!-- H -->
+<div class="bg-[#9ec5e8] text-slate-800 font-serif font-black text-xl py-3 rounded shadow-sm border-b-2 border-blue-400">h</div>
+<!-- D -->
+<div class="bg-[#afd4f5] text-slate-800 font-serif font-black text-xl py-3 rounded shadow-sm border-b-2 border-blue-400">d</div>
+<!-- A -->
+<div class="bg-[#9ec5e8] text-slate-800 font-serif font-black text-xl py-3 rounded shadow-sm border-b-2 border-blue-400">a</div>
+<!-- Y -->
+<div class="bg-[#bfe0fa] text-slate-800 font-serif font-black text-xl py-3 rounded shadow-sm border-b-2 border-blue-400">y</div>
+</div>
+<!-- "On Earth" Disney Subtitle -->
+<h2 class="font-banner-title text-3xl font-bold text-[#b5874c] mt-2 mb-3 tracking-wide">
+        On Earth
+      </h2>
+<!-- "Join Us To Celebrate" Ribbon Banner -->
+<div class="w-full max-w-[290px] relative my-1">
+<div class="bg-[#d8b584] text-[#4a2e10] font-friendly font-semibold text-xs sm:text-sm py-1.5 px-6 rounded-md shadow-md border border-[#c49b60] flex items-center justify-between">
+<!-- Left Mini Mickey Silhouette -->
+<span class="w-3 h-3 rounded-full bg-[#4a2e10] inline-block relative">
+<span class="w-1.5 h-1.5 rounded-full bg-[#4a2e10] absolute -top-1 -left-0.5"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#4a2e10] absolute -top-1 -right-0.5"></span>
+</span>
+<span class="uppercase tracking-widest font-bold">Join Us To Celebrate</span>
+<!-- Right Mini Mickey Silhouette -->
+<span class="w-3 h-3 rounded-full bg-[#4a2e10] inline-block relative">
+<span class="w-1.5 h-1.5 rounded-full bg-[#4a2e10] absolute -top-1 -left-0.5"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#4a2e10] absolute -top-1 -right-0.5"></span>
+</span>
+</div>
+</div>
+</section>
+<!-- END: Magical Hero Section -->
+<!-- BEGIN: Birthday Boy Jackson Callout -->
+<section class="relative px-6 py-6 text-center" data-purpose="boy-hero-name">
+<!-- Floating Mickey Balloon (Left) -->
+<div class="absolute left-6 top-2 balloon-float pointer-events-none opacity-85">
+<div class="relative w-9 h-9 rounded-full bg-[#b8daf7] border border-blue-300 shadow-sm flex items-center justify-center">
+<div class="w-4 h-4 rounded-full bg-[#b8daf7] border border-blue-300 absolute -top-2 -left-1.5"></div>
+<div class="w-4 h-4 rounded-full bg-[#b8daf7] border border-blue-300 absolute -top-2 -right-1.5"></div>
+</div>
+<div class="w-0.5 h-7 bg-slate-300 mx-auto -mt-0.5"></div>
+</div>
+<!-- Floating Mickey Balloon (Right) -->
+<div class="absolute right-6 top-3 balloon-float pointer-events-none opacity-85" style="animation-delay: 1.5s;">
+<div class="relative w-10 h-10 rounded-full bg-[#b8daf7] border border-blue-300 shadow-sm flex items-center justify-center">
+<div class="w-4.5 h-4.5 rounded-full bg-[#b8daf7] border border-blue-300 absolute -top-2 -left-1.5"></div>
+<div class="w-4.5 h-4.5 rounded-full bg-[#b8daf7] border border-blue-300 absolute -top-2 -right-1.5"></div>
+</div>
+<div class="w-0.5 h-8 bg-slate-300 mx-auto -mt-0.5"></div>
+</div>
+<!-- Child Name & Age in Disney-esque styling -->
+<h3 class="font-disney-display text-4xl sm:text-5xl font-extrabold text-[#234d75] tracking-wide mb-1">
+        Jackson
+      </h3>
+<p class="font-friendly text-xl sm:text-2xl font-bold text-[#356597] tracking-normal">
+        is turning 5
+      </p>
+</section>
+<!-- END: Birthday Boy Jackson Callout -->
+<!-- BEGIN: Date & Location Details Card -->
+<section class="px-6 py-2" data-purpose="event-details-card">
+<div class="bg-white/90 backdrop-blur-sm rounded-2xl p-5 border border-amber-100 shadow-sm text-center flex flex-col items-center">
+<p class="text-[11px] font-bold tracking-widest text-[#cca16b] uppercase mb-1">
+          November
+        </p>
+<!-- Big Date Display -->
+<div class="flex items-center justify-center gap-3 text-slate-700 my-1">
+<span class="text-xs uppercase font-semibold text-slate-500 tracking-wider">Saturday</span>
+<span class="text-3xl font-extrabold text-[#b88d57] px-2 border-x-2 border-amber-200">20</span>
+<span class="text-xs uppercase font-semibold text-slate-500 tracking-wider">at 3:00 PM</span>
+</div>
+<!-- Venue Address -->
+<div class="mt-3 text-slate-600 text-xs sm:text-sm font-medium leading-relaxed">
+<p class="font-bold text-slate-800">125 Willow Lane,</p>
+<p>Rosewood, CA 90210</p>
+</div>
+<!-- Check Location Action Button -->
+<a class="mt-4 inline-block bg-[#eedbc5] hover:bg-[#e4cbaf] active:scale-95 text-[#734f24] font-bold text-xs uppercase tracking-wider py-2.5 px-6 rounded-full border border-[#d2b38f] shadow-sm transition" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+          Check Location
+        </a>
+</div>
+</section>
+<!-- END: Date & Location Details Card -->
+<!-- BEGIN: Countdown Timer Section -->
+<section class="px-6 py-7 text-center relative" data-purpose="countdown-section">
+<!-- Curved / Whimsical invitation phrase -->
+<p class="text-[#845b2b] text-sm font-semibold italic mb-3">
+        "Can't wait to celebrate the magic with you!"
+      </p>
+<!-- Mickey Silhouette Countdown Pod -->
+<div class="relative max-w-[280px] mx-auto bg-[#dec096] p-4 rounded-3xl border border-[#cba26b] shadow-inner text-amber-950">
+<!-- Center Mickey Head Silhouette Silhouette inside badge -->
+<div class="flex justify-center mb-1">
+<div class="w-6 h-6 bg-[#b28549] rounded-full relative">
+<div class="w-3 h-3 bg-[#b28549] rounded-full absolute -top-1.5 -left-1"></div>
+<div class="w-3 h-3 bg-[#b28549] rounded-full absolute -top-1.5 -right-1"></div>
+</div>
+</div>
+<!-- Countdown Timer Digits (Interactive Mockup) -->
+<div class="flex items-center justify-center gap-1.5 text-xl font-extrabold tracking-wider font-mono text-[#43290e]" id="countdown-clock">
+<div class="flex flex-col items-center">
+<span id="days">159</span>
+<span class="text-[8px] font-sans font-medium uppercase tracking-tighter text-[#6e461b]">Days</span>
+</div>
+<span class="text-base font-bold pb-2">:</span>
+<div class="flex flex-col items-center">
+<span id="hours">08</span>
+<span class="text-[8px] font-sans font-medium uppercase tracking-tighter text-[#6e461b]">Hours</span>
+</div>
+<span class="text-base font-bold pb-2">:</span>
+<div class="flex flex-col items-center">
+<span id="minutes">40</span>
+<span class="text-[8px] font-sans font-medium uppercase tracking-tighter text-[#6e461b]">Min</span>
+</div>
+<span class="text-base font-bold pb-2">:</span>
+<div class="flex flex-col items-center">
+<span id="seconds">55</span>
+<span class="text-[8px] font-sans font-medium uppercase tracking-tighter text-[#6e461b]">Sec</span>
+</div>
+</div>
+</div>
+<!-- Pluto and Goofy Playful Accents (Bottom of Countdown) -->
+<div class="flex justify-between items-center px-6 mt-3 text-2xl">
+<span title="Pluto">🐕🐾</span>
+<span title="Goofy">🎩✨</span>
+</div>
+</section>
+<!-- END: Countdown Timer Section -->
+<!-- BEGIN: Gift Registry Section -->
+<section class="px-6 py-6 text-center" data-purpose="gift-registry">
+<div class="bg-white/80 backdrop-blur-sm rounded-3xl p-6 border border-blue-100 shadow-sm flex flex-col items-center">
+<!-- Header with Balloons -->
+<div class="flex items-center justify-center gap-2 mb-2">
+<span class="text-sm">🎈</span>
+<h4 class="font-disney-display text-2xl font-bold text-[#2e5782]">
+            Gift Registry
+          </h4>
+<span class="text-sm">🎈</span>
+</div>
+<!-- Registry Explanatory Message -->
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-[270px] mb-4">
+          Your presence and love are the best gifts of all. For those who wish to send a little something, our baby registry can be found here
+        </p>
+<!-- Registry Pill Button -->
+<a class="bg-[#ebd9c1] hover:bg-[#e2c7a5] active:scale-95 text-[#734f24] font-bold text-xs uppercase tracking-wider py-2.5 px-8 rounded-full border border-[#cba474] shadow-sm transition" href="#registry">
+          Registry Link
+        </a>
+<!-- Ferris Wheel with Mickey Head Center Graphic -->
+<div class="mt-6 flex flex-col items-center">
+<div class="relative w-36 h-36 flex items-center justify-center">
+<!-- Ferris Wheel Outer Ring SVG -->
+<svg class="w-full h-full text-amber-200 animate-spin" fill="none" stroke="currentColor" stroke-width="2" style="animation-duration: 40s;" viewbox="0 0 120 120">
+<circle cx="60" cy="60" r="50" stroke="#d5b98f" stroke-dasharray="4 3"></circle>
+<!-- Spokes -->
+<line stroke="#cca16b" x1="60" x2="60" y1="10" y2="110"></line>
+<line stroke="#cca16b" x1="10" x2="110" y1="60" y2="60"></line>
+<line stroke="#cca16b" x1="25" x2="95" y1="25" y2="95"></line>
+<line stroke="#cca16b" x1="25" x2="95" y1="95" y2="25"></line>
+<!-- Cabins -->
+<circle cx="60" cy="10" fill="#9ec5e8" r="4"></circle>
+<circle cx="60" cy="110" fill="#f8b4d9" r="4"></circle>
+<circle cx="10" cy="60" fill="#ffe082" r="4"></circle>
+<circle cx="110" cy="60" fill="#a5d6a7" r="4"></circle>
+<circle cx="25" cy="25" fill="#ffcc80" r="4"></circle>
+<circle cx="95" cy="95" fill="#ce93d8" r="4"></circle>
+<circle cx="25" cy="95" fill="#80deea" r="4"></circle>
+<circle cx="95" cy="25" fill="#ffab91" r="4"></circle>
+</svg>
+<!-- Mickey Silhouette Head Hub in Center -->
+<div class="absolute w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center shadow-md">
+<div class="w-5 h-5 bg-slate-900 rounded-full absolute -top-2.5 -left-1"></div>
+<div class="w-5 h-5 bg-slate-900 rounded-full absolute -top-2.5 -right-1"></div>
+<!-- Friendly Mickey Smile Face -->
+<span class="text-xs text-white">🐭</span>
+</div>
+</div>
+<!-- Ferris wheel leg stand -->
+<div class="w-20 border-b-4 border-amber-300 -mt-2"></div>
+</div>
+</div>
+</section>
+<!-- END: Gift Registry Section -->
+<!-- BEGIN: Birthday Boy Photo in Mickey Ears Frame -->
+<section class="px-6 py-4 flex flex-col items-center" data-purpose="mickey-photo-frame">
+<div class="relative w-44 h-40 flex items-center justify-center my-2">
+<!-- Big Mickey Ears (Beige/Tan Frame Accent) -->
+<div class="w-16 h-16 rounded-full bg-[#c8a170] absolute top-0 -left-1 shadow-sm"></div>
+<div class="w-16 h-16 rounded-full bg-[#c8a170] absolute top-0 -right-1 shadow-sm"></div>
+<!-- Center Circular Photo Frame -->
+<div class="relative z-10 w-32 h-32 rounded-full p-1.5 bg-[#c8a170] shadow-md flex items-center justify-center">
+<div class="w-full h-full rounded-full overflow-hidden bg-white border-2 border-white flex items-center justify-center">
+<!-- Child Portrait Placeholder Image -->
+<img alt="Birthday Boy Jackson smiling" class="w-full h-full object-cover" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEoAjTlgX4OOt7X9MOlhdODelRA9xIOdTzOBbbGWCdO21lCwxEdAkzDvuFs1E1ggf0Qwqj3SxtGJ6eJrwb8URLB3e8M2lS9nilD0fvEjGejNBOglqYMIRMR2-pq_sQ3mdYLj6WAlje2nwoJb4g1rE_vm_3yA7_n35PgVOCPyqevVFZ11EQFV7qzdSZiSeiqRYY960OfhdvTvZt3dtyYklCRkCHu_yWl6864rPoCXY"/>
+</div>
+</div>
+<!-- Tiny Mickey balloon hovering next to photo -->
+<div class="absolute -right-3 bottom-1 balloon-float">
+<div class="w-6 h-6 rounded-full bg-blue-200 border border-blue-300 relative">
+<div class="w-2.5 h-2.5 rounded-full bg-blue-200 absolute -top-1 -left-0.5"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-blue-200 absolute -top-1 -right-0.5"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Birthday Boy Photo in Mickey Ears Frame -->
+<!-- BEGIN: RSVP Section -->
+<section class="px-5 py-4" data-purpose="rsvp-form-container" id="rsvp-section">
+<div class="bg-white rounded-3xl p-5 border border-blue-200 shadow-md relative">
+<!-- RSVP Top Header with Donald & Mickey -->
+<div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+<div class="text-2xl" title="Mickey">🐭</div>
+<div class="text-center">
+<h4 class="font-banner-title text-3xl font-extrabold text-[#ba8e55] tracking-wide">
+              RSVP
+            </h4>
+<p class="text-[11px] font-bold uppercase tracking-wider text-slate-500">
+              Please RSVP by 15 October
+            </p>
+</div>
+<div class="text-2xl" title="Donald">🦆</div>
+</div>
+<!-- Embedded RSVP Form -->
+<form class="space-y-4" id="birthday-rsvp-form" onsubmit="event.preventDefault(); alert('Thank you! Your RSVP has been received.');">
+<!-- Name Field -->
+<div data-purpose="form-group-name">
+<label class="block text-xs font-bold text-slate-700 mb-1" for="guest_name">
+              Your name <span class="text-red-500">*</span>
+</label>
+<input class="w-full text-xs rounded-lg border-slate-200 focus:border-[#9ec5e8] focus:ring focus:ring-blue-100 placeholder:text-slate-300 py-2.5 px-3" id="guest_name" name="guest_name" placeholder="e.g. Aunt Sarah" required="" type="text"/>
+</div>
+<!-- Attendance Option Field -->
+<div data-purpose="form-group-attendance">
+<label class="block text-xs font-bold text-slate-700 mb-1.5">
+              Are you coming? <span class="text-red-500">*</span>
+</label>
+<div class="space-y-2">
+<label class="flex items-center gap-2.5 p-2 rounded-lg border border-slate-200 hover:bg-blue-50/50 cursor-pointer text-xs text-slate-700 transition">
+<input checked="" class="text-[#9ec5e8] focus:ring-[#9ec5e8] h-4 w-4 border-slate-300" name="attending" required="" type="radio" value="yes"/>
+<span>Yes! I'll be there</span>
+</label>
+<label class="flex items-center gap-2.5 p-2 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer text-xs text-slate-600 transition">
+<input class="text-[#9ec5e8] focus:ring-[#9ec5e8] h-4 w-4 border-slate-300" name="attending" type="radio" value="no"/>
+<span>Can't make it this time.</span>
+</label>
+</div>
+</div>
+<!-- Phone Number Field -->
+<div data-purpose="form-group-phone">
+<label class="block text-xs font-bold text-slate-700 mb-1 leading-snug" for="phone_number">
+              Please share your phone number so we can reach out with updates if needed
+            </label>
+<input class="w-full text-xs rounded-lg border-slate-200 focus:border-[#9ec5e8] focus:ring focus:ring-blue-100 placeholder:text-slate-300 py-2.5 px-3" id="phone_number" name="phone_number" placeholder="(555) 000-0000" type="tel"/>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-[#8fbde6] hover:bg-[#7faed7] active:scale-[0.98] text-white font-bold text-sm py-2.5 px-4 rounded-xl shadow-sm transition duration-150 ease-in-out cursor-pointer" type="submit">
+            Submit
+          </button>
+</form>
+</div>
+</section>
+<!-- END: RSVP Section -->
+<!-- BEGIN: Footer Section -->
+<footer class="mt-4 px-6 text-center" data-purpose="page-footer">
+<h5 class="font-banner-title text-2xl font-bold text-[#b5874c] mb-1">
+        See You Soon!
+      </h5>
+<p class="text-xs font-extrabold uppercase tracking-widest text-slate-600 mb-4">
+        20 November 2026
+      </p>
+<!-- Disney Friends Celebration Lineup Graphic -->
+<div class="flex justify-center items-center gap-2 text-2xl opacity-90 py-2 border-t border-blue-100/60 max-w-[200px] mx-auto">
+<span title="Mickey">🐭</span>
+<span title="Donald">🦆</span>
+<span title="Goofy">🐶</span>
+<span title="Minnie">🎀</span>
+</div>
+<p class="text-[10px] text-slate-400 mt-2">
+        Crafted with magic for Jackson's 5th Birthday Celebration
+      </p>
+</footer>
+<!-- END: Footer Section -->
+</main>
+<!-- BEGIN: Interactive Logic Scripts -->
+<script data-purpose="countdown-timer">
+    // Live ticking countdown timer simulation
+    (function initCountdown() {
+      const daysEl = document.getElementById('days');
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+
+      let totalSeconds = (159 * 24 * 3600) + (8 * 3600) + (40 * 60) + 55;
+
+      setInterval(() => {
+        if (totalSeconds <= 0) return;
+        totalSeconds--;
+
+        const d = Math.floor(totalSeconds / (3600 * 24));
+        const h = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+        const m = Math.floor((totalSeconds % 3600) / 60);
+        const s = Math.floor(totalSeconds % 60);
+
+        if (daysEl) daysEl.textContent = String(d);
+        if (hoursEl) hoursEl.textContent = String(h).padStart(2, '0');
+        if (minutesEl) minutesEl.textContent = String(m).padStart(2, '0');
+        if (secondsEl) secondsEl.textContent = String(s).padStart(2, '0');
+      }, 1000);
+    })();
+  </script>
+<script data-purpose="audio-toggle">
+    // Music button toggle feedback
+    const musicBtn = document.getElementById('music-toggle-btn');
+    let isPlaying = false;
+    if (musicBtn) {
+      musicBtn.addEventListener('click', () => {
+        isPlaying = !isPlaying;
+        if (isPlaying) {
+          musicBtn.classList.add('ring-4', 'ring-amber-300');
+        } else {
+          musicBtn.classList.remove('ring-4', 'ring-amber-300');
+        }
+      });
+    }
+  </script>
+<!-- END: Interactive Logic Scripts -->
+</body></html>

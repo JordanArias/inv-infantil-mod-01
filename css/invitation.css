@@ -1,0 +1,1381 @@
+/* ==========================================================================
+   INVITATION.CSS - ESTILOS PRINCIPALES DE LA INVITACIÓN DISNEY MICKEY & FRIENDS
+   Recreación fiel inspirada en Stitch AI + Referencia Original en Español
+   ========================================================================== */
+
+.main-invitation-container {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at 50% 10%, #ffffff 0%, #f9fcff 36%, #eef6fd 72%, #e4f1fb 100%);
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* Resplandor superior mágico estilo cielo Disney */
+.bg-glow-top {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 760px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(226, 186, 125, 0.25) 0%, rgba(158, 197, 232, 0.22) 52%, transparent 78%);
+  filter: blur(24px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Nubes suaves ambientales en el fondo */
+.ambient-smoke-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ambient-cloud {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  filter: blur(46px);
+  opacity: 0.65;
+  animation: floatCloudSmoke 9s ease-in-out infinite alternate;
+}
+
+.ambient-cloud.cloud-1 {
+  top: 5%;
+  left: -8%;
+  width: 340px;
+  height: 160px;
+  background: radial-gradient(ellipse at center, rgba(197, 226, 247, 0.72) 0%, transparent 80%);
+}
+
+.ambient-cloud.cloud-2 {
+  top: 20%;
+  right: -10%;
+  width: 380px;
+  height: 175px;
+  background: radial-gradient(ellipse at center, rgba(235, 217, 193, 0.65) 0%, transparent 80%);
+  animation-delay: -2.5s;
+}
+
+.ambient-cloud.cloud-3 {
+  top: 38%;
+  left: -10%;
+  width: 390px;
+  height: 185px;
+  background: radial-gradient(ellipse at center, rgba(197, 226, 247, 0.65) 0%, transparent 82%);
+  animation-delay: -4.2s;
+}
+
+.ambient-cloud.cloud-4 {
+  top: 56%;
+  right: -8%;
+  width: 370px;
+  height: 175px;
+  background: radial-gradient(ellipse at center, rgba(235, 217, 193, 0.6) 0%, transparent 80%);
+  animation-delay: -1.8s;
+}
+
+.ambient-cloud.cloud-5 {
+  top: 74%;
+  left: -10%;
+  width: 390px;
+  height: 185px;
+  background: radial-gradient(ellipse at center, rgba(184, 218, 247, 0.68) 0%, transparent 82%);
+  animation-delay: -3.2s;
+}
+
+.ambient-cloud.cloud-6 {
+  bottom: 4%;
+  right: -8%;
+  width: 420px;
+  height: 190px;
+  background: radial-gradient(ellipse at center, rgba(226, 186, 125, 0.45) 0%, transparent 82%);
+}
+
+@keyframes floatCloudSmoke {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-14px) scale(1.05);
+  }
+}
+
+/* ==========================================================================
+   SILUETAS DE MICKEY (sirueta_,mikey.png) FLOTANDO DE FONDO
+   ========================================================================== */
+.floating-bg-decor {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.bg-float-mickey {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.23;
+  filter: drop-shadow(0 3px 6px rgba(174, 130, 73, 0.16));
+  will-change: transform, opacity;
+  animation: floatBgMickey 7s ease-in-out infinite alternate;
+}
+
+@keyframes floatBgMickey {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(-10deg) scale(0.94);
+    opacity: 0.17;
+  }
+  50% {
+    opacity: 0.28;
+  }
+  100% {
+    transform: translateY(-15px) translateX(5px) rotate(10deg) scale(1.06);
+    opacity: 0.22;
+  }
+}
+
+/* 24 posiciones distribuidas en los márgenes para acompañar todo el recorrido */
+.bg-float-mickey.pos-1  { top: 1.5%;  left: 3.5%;  width: 28px; animation-duration: 6.4s; animation-delay: -0.6s; }
+.bg-float-mickey.pos-2  { top: 3.2%;  right: 4%;   width: 34px; animation-duration: 7.4s; animation-delay: -2.1s; }
+.bg-float-mickey.pos-3  { top: 7.5%;  left: 2.5%;  width: 24px; animation-duration: 6.8s; animation-delay: -1.5s; }
+.bg-float-mickey.pos-4  { top: 9.4%;  right: 3%;   width: 28px; animation-duration: 8.0s; animation-delay: -3.4s; }
+.bg-float-mickey.pos-5  { top: 14.2%; left: 4%;    width: 32px; animation-duration: 7.2s; animation-delay: -0.8s; }
+.bg-float-mickey.pos-6  { top: 16.5%; right: 3.5%; width: 26px; animation-duration: 6.6s; animation-delay: -4.0s; }
+.bg-float-mickey.pos-7  { top: 21.8%; left: 2.8%;  width: 30px; animation-duration: 7.6s; animation-delay: -2.3s; }
+.bg-float-mickey.pos-8  { top: 24.5%; right: 2.8%; width: 34px; animation-duration: 6.9s; animation-delay: -1.2s; }
+.bg-float-mickey.pos-9  { top: 29.5%; left: 3.5%;  width: 25px; animation-duration: 7.5s; animation-delay: -3.0s; }
+.bg-float-mickey.pos-10 { top: 33.2%; right: 4%;   width: 29px; animation-duration: 7.1s; animation-delay: -1.7s; }
+.bg-float-mickey.pos-11 { top: 38.4%; left: 2.5%;  width: 33px; animation-duration: 7.9s; animation-delay: -4.5s; }
+.bg-float-mickey.pos-12 { top: 42.0%; right: 2.5%; width: 27px; animation-duration: 6.7s; animation-delay: -2.6s; }
+.bg-float-mickey.pos-13 { top: 47.2%; left: 3.5%;  width: 30px; animation-duration: 7.8s; animation-delay: -0.9s; }
+.bg-float-mickey.pos-14 { top: 51.5%; right: 3.5%; width: 35px; animation-duration: 7.3s; animation-delay: -3.8s; }
+.bg-float-mickey.pos-15 { top: 56.4%; left: 2.2%;  width: 26px; animation-duration: 7.6s; animation-delay: -2.0s; }
+.bg-float-mickey.pos-16 { top: 60.8%; right: 2.8%; width: 31px; animation-duration: 6.8s; animation-delay: -4.1s; }
+.bg-float-mickey.pos-17 { top: 65.5%; left: 4%;    width: 28px; animation-duration: 8.1s; animation-delay: -1.1s; }
+.bg-float-mickey.pos-18 { top: 70.0%; right: 3.5%; width: 33px; animation-duration: 6.5s; animation-delay: -3.2s; }
+.bg-float-mickey.pos-19 { top: 74.8%; left: 2.5%;  width: 30px; animation-duration: 7.4s; animation-delay: -1.9s; }
+.bg-float-mickey.pos-20 { top: 79.2%; right: 2.5%; width: 26px; animation-duration: 7.7s; animation-delay: -4.3s; }
+.bg-float-mickey.pos-21 { top: 84.0%; left: 3.5%;  width: 34px; animation-duration: 6.9s; animation-delay: -1.4s; }
+.bg-float-mickey.pos-22 { top: 88.5%; right: 4%;   width: 29px; animation-duration: 7.6s; animation-delay: -3.5s; }
+.bg-float-mickey.pos-23 { top: 93.0%; left: 4%;    width: 27px; animation-duration: 7.1s; animation-delay: -0.7s; }
+.bg-float-mickey.pos-24 { top: 96.2%; right: 4%;   width: 32px; animation-duration: 8.2s; animation-delay: -2.8s; }
+
+/* ==========================================================================
+   BARRA SUPERIOR Y BOTÓN DE MÚSICA CON OREJAS DE MICKEY
+   ========================================================================== */
+.top-music-header {
+  width: 100%;
+  max-width: 520px;
+  padding: 1.25rem 1.35rem 0.25rem 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 20;
+}
+
+.mickey-music-btn {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #d7b27d 0%, #c1955b 100%);
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(174, 130, 73, 0.32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mickey-music-btn:hover {
+  transform: scale(1.07);
+}
+
+.mickey-music-btn:active {
+  transform: scale(0.95);
+}
+
+.mickey-ear-left,
+.mickey-ear-right {
+  position: absolute;
+  top: -7px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #d7b27d 0%, #c1955b 100%);
+  border: 1.8px solid #ffffff;
+  z-index: 1;
+}
+
+.mickey-ear-left {
+  left: -5px;
+}
+
+.mickey-ear-right {
+  right: -5px;
+}
+
+.mickey-music-note-svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  position: relative;
+  z-index: 2;
+}
+
+.music-notice-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(204, 161, 107, 0.45);
+  border-radius: 9999px;
+  padding: 0.3rem 0.85rem;
+  box-shadow: 0 2px 8px rgba(174, 130, 73, 0.12);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--disney-gold-dark);
+}
+
+.music-notice-tag svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--disney-tan);
+}
+
+/* ==========================================================================
+   1. SECCIÓN HERO MÁGICO: CASTILLO DISNEY, FUEGOS ARTIFICIALES, MIKEY_INICIO Y BANDERINES
+   ========================================================================== */
+.hero-section {
+  width: 100%;
+  max-width: 540px;
+  position: relative;
+  padding: 0.25rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 4;
+}
+
+/* Contenedor del Castillo Disney y Fuegos Artificiales */
+.castle-stage {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  height: 215px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.firework-burst {
+  position: absolute;
+  color: #dfc184;
+  pointer-events: none;
+}
+
+.firework-burst.fw-left {
+  left: 12px;
+  top: 26px;
+  width: 62px;
+  height: 62px;
+}
+
+.firework-burst.fw-right {
+  right: 10px;
+  top: 12px;
+  width: 68px;
+  height: 68px;
+}
+
+.castle-svg-wrap {
+  position: relative;
+  z-index: 2;
+  width: 205px;
+  display: flex;
+  justify-content: center;
+}
+
+.castle-svg {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 6px 14px rgba(174, 130, 73, 0.18));
+}
+
+/* Título "¡El Más Feliz" sobre el castillo */
+.happiest-title {
+  font-family: var(--font-banner-title);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2.55rem;
+  line-height: 1.08;
+  color: #ad8148;
+  letter-spacing: 0.02em;
+  margin-top: -1.65rem;
+  margin-bottom: 0.15rem;
+  position: relative;
+  z-index: 5;
+  text-shadow:
+    0 2px 0 #ffffff,
+    0 -1px 0 #ffffff,
+    2px 0 0 #ffffff,
+    -2px 0 0 #ffffff,
+    0 4px 10px rgba(174, 130, 73, 0.22);
+}
+
+/* Ilustración mikey_inicio.png asomándose sobre los bloques de cumpleaños */
+.hero-characters-row {
+  position: relative;
+  width: 100%;
+  max-width: 356px;
+  margin: -0.35rem auto -0.65rem auto;
+  z-index: 6;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.castle-side-flag {
+  width: 28px;
+  height: 44px;
+  flex-shrink: 0;
+  margin-bottom: 6px;
+}
+
+.hero-mikey-group-img {
+  width: 82%;
+  max-width: 285px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(30, 75, 110, 0.18));
+}
+
+/* Bloques de Banderines Celestes Tipo Torres de Castillo (C U M P L E A Ñ O S) */
+.birthday-castle-banners {
+  width: 100%;
+  max-width: 390px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 3px;
+  padding: 0.35rem 0.2rem;
+  position: relative;
+  z-index: 5;
+  align-items: start;
+}
+
+.castle-letter-block {
+  position: relative;
+  padding: 0.85rem 0.1rem 0.7rem 0.1rem;
+  border-radius: 0.2rem 0.2rem 0.35rem 0.35rem;
+  font-family: var(--font-banner-title);
+  font-weight: 700;
+  font-size: 1.32rem;
+  line-height: 1;
+  color: var(--disney-navy);
+  box-shadow: 0 5px 10px rgba(30, 75, 110, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+/* Almenas superiores tipo castillo en cada bloque */
+.castle-letter-block::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: inherit;
+  clip-path: polygon(
+    0% 100%, 0% 0%, 24% 0%, 24% 100%,
+    38% 100%, 38% 0%, 62% 0%, 62% 100%,
+    76% 100%, 76% 0%, 100% 0%, 100% 100%
+  );
+}
+
+.castle-letter-block.tone-dark {
+  background-color: #8fc1e3;
+  transform: translateY(5px);
+}
+
+.castle-letter-block.tone-light {
+  background-color: #b8ddf7;
+  transform: translateY(-2px);
+}
+
+/* Bloque "Del Mundo!" + Personajes laterales + Cinta "¡Acompáñanos a celebrar!" */
+.on-earth-ribbon-stage {
+  position: relative;
+  width: 100%;
+  max-width: 370px;
+  margin-top: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.on-earth-title {
+  font-family: var(--font-banner-title);
+  font-weight: 700;
+  font-size: 2.05rem;
+  color: #ad8148;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.45rem;
+  text-shadow: 0 2px 6px rgba(255, 255, 255, 0.9);
+}
+
+/* Personajes sentados / escoltando la cinta dorada */
+.ribbon-characters-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.3rem;
+}
+
+.ribbon-char-left {
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  width: 68px;
+  height: auto;
+  z-index: 7;
+  filter: drop-shadow(0 4px 8px rgba(30, 75, 110, 0.2));
+  pointer-events: none;
+}
+
+.ribbon-char-right {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  width: 64px;
+  height: auto;
+  z-index: 7;
+  filter: drop-shadow(0 4px 8px rgba(30, 75, 110, 0.2));
+  pointer-events: none;
+}
+
+.celebrate-gold-ribbon {
+  width: 100%;
+  max-width: 325px;
+  background: linear-gradient(90deg, #d7b483 0%, #e8cfa8 50%, #d7b483 100%);
+  border: 1.5px solid #ba8e54;
+  border-radius: 0.45rem;
+  padding: 0.45rem 3.3rem;
+  box-shadow:
+    0 5px 14px rgba(174, 130, 73, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  position: relative;
+  z-index: 5;
+}
+
+.ribbon-mickey-pin {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.celebrate-ribbon-text {
+  font-family: var(--font-banner-title);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.94rem;
+  color: #5b3b14;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   2. SECCIÓN FESTEJADO: "JACKSON CUMPLE 5 AÑITOS" EN TIPOGRAFÍA DISNEY + GLOBOS
+   ========================================================================== */
+.kid-callout-section {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  padding: 1.55rem 1.5rem 1.15rem 1.5rem;
+  text-align: center;
+  z-index: 4;
+}
+
+/* Globos flotantes con orejas de Mickey */
+.mickey-balloon-decor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.mickey-balloon-decor.balloon-left {
+  left: 16px;
+  bottom: 8px;
+}
+
+.mickey-balloon-decor.balloon-right {
+  right: 16px;
+  top: 10px;
+  animation-delay: 1.4s;
+}
+
+.mickey-balloon-svg {
+  width: 54px;
+  height: 76px;
+  filter: drop-shadow(0 4px 8px rgba(143, 193, 227, 0.28));
+}
+
+.kid-disney-name {
+  font-family: var(--font-disney-script);
+  font-weight: 400;
+  font-size: 3.85rem;
+  line-height: 1.05;
+  color: var(--disney-navy);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.15rem;
+  text-shadow: 0 3px 8px rgba(30, 75, 110, 0.12);
+}
+
+.kid-disney-age {
+  font-family: var(--font-disney-script);
+  font-weight: 400;
+  font-size: 2.05rem;
+  line-height: 1.15;
+  color: #295d87;
+  letter-spacing: 0.03em;
+}
+
+/* ==========================================================================
+   3. SECCIÓN FECHA, HORA Y UBICACIÓN
+   ========================================================================== */
+.event-details-section {
+  width: 100%;
+  max-width: 440px;
+  padding: 0.65rem 1.35rem 1.35rem 1.35rem;
+  z-index: 4;
+}
+
+.event-details-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 1.75rem;
+  padding: 1.5rem 1.35rem;
+  border: 1.5px solid rgba(226, 186, 125, 0.45);
+  box-shadow: 0 12px 28px rgba(30, 75, 110, 0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-month-label {
+  font-family: var(--font-friendly);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--disney-navy);
+  text-transform: uppercase;
+  margin-bottom: 0.45rem;
+}
+
+.event-date-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin: 0.2rem 0 0.85rem 0;
+}
+
+.event-day-name,
+.event-time-text {
+  font-family: var(--font-friendly);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--disney-navy);
+}
+
+.event-day-number {
+  font-family: var(--font-friendly);
+  font-size: 2.35rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #b88d57;
+  padding: 0 0.85rem;
+  border-left: 2px solid #d7b483;
+  border-right: 2px solid #d7b483;
+}
+
+.event-address-block {
+  color: var(--disney-navy);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.45;
+  margin-bottom: 1.1rem;
+}
+
+.event-address-block .venue-title {
+  font-weight: 700;
+}
+
+/* Botón Píldora Dorado/Arena con borde interior tipo costura */
+.disney-tan-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  background: linear-gradient(180deg, #ebd9c1 0%, #dfc4a2 100%);
+  color: #6b481e;
+  font-family: var(--font-banner-title);
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  padding: 0.62rem 1.85rem;
+  border-radius: 9999px;
+  border: 1.5px solid #b88d57;
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.6),
+    0 5px 14px rgba(174, 130, 73, 0.22);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.disney-tan-pill-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.75),
+    0 8px 18px rgba(174, 130, 73, 0.32);
+}
+
+.disney-tan-pill-btn:active {
+  transform: scale(0.97);
+}
+
+/* ==========================================================================
+   4. SECCIÓN CUENTA REGRESIVA CON ARCO MÁGICO, PLUTO Y GOOFY
+   ========================================================================== */
+.countdown-section {
+  width: 100%;
+  max-width: 440px;
+  padding: 1.2rem 1.35rem 1.5rem 1.35rem;
+  text-align: center;
+  position: relative;
+  z-index: 4;
+}
+
+/* Arco curvo para la frase "¡No podemos esperar para celebrar la magia contigo!" */
+.curved-phrase-wrap {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto -0.75rem auto;
+}
+
+.curved-phrase-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.curved-phrase-text {
+  font-family: var(--font-banner-title);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 13.5px;
+  fill: #9b6f39;
+  letter-spacing: 0.3px;
+}
+
+/* Banderines celestes sobre la cápsula del contador */
+.countdown-top-flags {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-bottom: -10px;
+  position: relative;
+  z-index: 3;
+}
+
+.mini-castle-flag {
+  width: 24px;
+  height: 32px;
+}
+
+/* Cápsula ovalada dorada del contador */
+.mickey-countdown-pod {
+  position: relative;
+  max-width: 315px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #dfc39d 0%, #d2b082 100%);
+  padding: 1.35rem 1.15rem 1.25rem 1.15rem;
+  border-radius: 9999px;
+  border: 2px solid #b58952;
+  box-shadow:
+    inset 0 0 0 3px rgba(255, 255, 255, 0.45),
+    0 10px 24px rgba(174, 130, 73, 0.25);
+  z-index: 2;
+}
+
+/* Medallón de Mickey con silueta de castillo arriba del contador */
+.countdown-mickey-crest {
+  width: 48px;
+  height: 48px;
+  margin: -2.4rem auto 0.35rem auto;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #b58952;
+  box-shadow: 0 4px 10px rgba(155, 111, 57, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+}
+
+.countdown-mickey-crest img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Dígitos del contador (Días : Horas : Min : Seg) */
+.countdown-clock-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  color: #ffffff;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 52px;
+}
+
+.countdown-digit {
+  font-family: var(--font-banner-title);
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.05;
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(107, 72, 30, 0.35);
+}
+
+.countdown-unit-label {
+  font-family: var(--font-friendly);
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fdf6ec;
+  margin-top: 0.2rem;
+}
+
+.countdown-colon {
+  font-family: var(--font-banner-title);
+  font-weight: 700;
+  font-size: 1.45rem;
+  color: #ffffff;
+  padding-bottom: 0.85rem;
+}
+
+/* Pluto y Goofy escoltando la base de la cuenta regresiva */
+.countdown-mascots-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1.75rem;
+  margin-top: -0.55rem;
+  position: relative;
+  z-index: 4;
+}
+
+.countdown-pluto-img {
+  width: 105px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(30, 75, 110, 0.16));
+  transition: transform 0.3s ease;
+}
+
+.countdown-goofy-img {
+  width: 122px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(30, 75, 110, 0.16));
+  transition: transform 0.3s ease;
+}
+
+.countdown-pluto-img:hover,
+.countdown-goofy-img:hover {
+  transform: scale(1.05) translateY(-3px);
+}
+
+/* ==========================================================================
+   5. SECCIÓN MESA DE REGALOS + RUEDA DE LA FORTUNA DE MICKEY
+   ========================================================================== */
+.gift-registry-section {
+  width: 100%;
+  max-width: 440px;
+  padding: 1rem 1.35rem 1.5rem 1.35rem;
+  text-align: center;
+  position: relative;
+  z-index: 4;
+}
+
+.gift-registry-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 2rem;
+  padding: 1.75rem 1.4rem 1.65rem 1.4rem;
+  border: 1.5px solid rgba(158, 197, 232, 0.55);
+  box-shadow: 0 12px 28px rgba(30, 75, 110, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registry-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 0.65rem;
+}
+
+.registry-heading {
+  font-family: var(--font-banner-title);
+  font-weight: 700;
+  font-size: 2rem;
+  color: #ad8148;
+}
+
+.registry-description {
+  font-family: var(--font-friendly);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--disney-navy);
+  line-height: 1.5;
+  max-width: 295px;
+  margin-bottom: 1.15rem;
+}
+
+/* Rueda de la Fortuna (Ferris Wheel) con Mickey en el centro */
+.ferris-wheel-stage {
+  margin-top: 1.45rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ferris-wheel-container {
+  position: relative;
+  width: 195px;
+  height: 195px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ferris-wheel-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Centro de la Rueda con Orejas de Mickey y Rostro de Mickey */
+.ferris-mickey-hub {
+  position: absolute;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: #18181b;
+  border: 2.5px solid #dfc184;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.ferris-mickey-hub::before,
+.ferris-mickey-hub::after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #18181b;
+  border: 2px solid #dfc184;
+  z-index: -1;
+}
+
+.ferris-mickey-hub::before {
+  left: -12px;
+}
+
+.ferris-mickey-hub::after {
+  right: -12px;
+}
+
+.ferris-mickey-face-img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 50%;
+}
+
+/* Base / Soporte Dorado de la Rueda de la Fortuna */
+.ferris-wheel-stand {
+  width: 120px;
+  height: 34px;
+  margin-top: -18px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   6. SECCIÓN MARCO DE FOTO CON OREJAS DE MICKEY
+   ========================================================================== */
+.mickey-photo-section {
+  width: 100%;
+  max-width: 440px;
+  padding: 1.1rem 1.35rem 1.35rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 4;
+}
+
+.mickey-ears-frame-stage {
+  position: relative;
+  width: 240px;
+  height: 215px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Orejas grandes doradas del portarretrato */
+.frame-mickey-ear {
+  position: absolute;
+  top: 0;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #d5b07c 0%, #c1965d 100%);
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.45),
+    0 6px 14px rgba(155, 111, 57, 0.22);
+  z-index: 1;
+  transition: transform 0.35s ease;
+}
+
+.frame-mickey-ear.ear-left {
+  left: 2px;
+}
+
+.frame-mickey-ear.ear-right {
+  right: 2px;
+}
+
+/* Círculo central del portarretrato */
+.frame-mickey-circle {
+  position: relative;
+  z-index: 2;
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  padding: 9px;
+  background: linear-gradient(145deg, #d5b07c 0%, #b88c52 100%);
+  box-shadow: 0 12px 26px rgba(155, 111, 57, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s ease;
+}
+
+.mickey-ears-frame-stage:hover .frame-mickey-circle {
+  transform: scale(1.03);
+}
+
+.frame-photo-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3.5px solid #ffffff;
+  background: #f0f7fd;
+}
+
+.mickey-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-caption-hint {
+  margin-top: 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--disney-gold-dark);
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   7. SECCIÓN RSVP (FORMULARIO EMBEBIDO + WHATSAPP + MICKEY & DONALD)
+   ========================================================================== */
+.rsvp-section {
+  width: 100%;
+  max-width: 440px;
+  padding: 1.15rem 1.25rem 1.6rem 1.25rem;
+  position: relative;
+  z-index: 4;
+}
+
+.rsvp-top-banner {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 0.35rem;
+  margin-bottom: -0.45rem;
+  z-index: 5;
+}
+
+.rsvp-char-group-img {
+  width: 86px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 10px rgba(30, 75, 110, 0.18));
+}
+
+.rsvp-header-center {
+  text-align: center;
+  padding-bottom: 0.65rem;
+}
+
+.rsvp-disney-title {
+  font-family: var(--font-banner-title);
+  font-weight: 700;
+  font-size: 2.55rem;
+  line-height: 1;
+  color: #ad8148;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.25rem;
+}
+
+.rsvp-deadline-sub {
+  font-family: var(--font-friendly);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--disney-navy);
+}
+
+.rsvp-card-outer {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 6px;
+  border: 2.5px solid #9ec5e8;
+  box-shadow: 0 12px 28px rgba(30, 75, 110, 0.1);
+}
+
+.rsvp-card-inner {
+  background: #ffffff;
+  border-radius: 1.2rem;
+  border: 1px solid #d5e8f9;
+  padding: 1.35rem 1.15rem;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rsvp-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: left;
+}
+
+.rsvp-field-label {
+  font-family: var(--font-friendly);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.rsvp-field-label .req-star {
+  color: #ef4444;
+}
+
+.rsvp-input,
+.rsvp-textarea {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 0.55rem;
+  padding: 0.68rem 0.85rem;
+  font-family: var(--font-friendly);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #1e293b;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rsvp-input::placeholder,
+.rsvp-textarea::placeholder {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.rsvp-input:focus,
+.rsvp-textarea:focus {
+  border-color: #8fc1e3;
+  box-shadow: 0 0 0 3px rgba(143, 193, 227, 0.25);
+}
+
+/* Opciones Radio de Asistencia Estilo Tarjeta Gris/Celeste */
+.rsvp-radio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.rsvp-radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.68rem 0.85rem;
+  border-radius: 0.5rem;
+  background-color: #e9ecef;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.rsvp-radio-option:hover {
+  background-color: #e2ecf5;
+}
+
+.rsvp-radio-option input[type="radio"] {
+  accent-color: #5b9bd5;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Botón Celeste Disney para Enviar Confirmación */
+.disney-submit-btn {
+  width: 100%;
+  background: linear-gradient(180deg, #98c6eb 0%, #7eb2dd 100%);
+  color: #ffffff;
+  font-family: var(--font-friendly);
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  border: 1.5px solid #6ba3d2;
+  box-shadow: 0 6px 16px rgba(126, 178, 221, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.disney-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 20px rgba(126, 178, 221, 0.48);
+}
+
+.disney-submit-btn:active {
+  transform: scale(0.98);
+}
+
+.disney-submit-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* ==========================================================================
+   8. SECCIÓN DE CIERRE ("¡TE ESPERAMOS!", MIKEY_FINAL.PNG Y PAPÁS)
+   ========================================================================== */
+.closing-section {
+  width: 100%;
+  max-width: 460px;
+  padding: 1.15rem 1.35rem 2.25rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 4;
+}
+
+.see-you-soon-title {
+  font-family: var(--font-banner-title);
+  font-weight: 700;
+  font-size: 2.15rem;
+  color: #ad8148;
+  margin-bottom: 0.3rem;
+}
+
+.closing-date-label {
+  font-family: var(--font-friendly);
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--disney-navy);
+  margin-bottom: 1.15rem;
+}
+
+.closing-friends-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 295px;
+  margin: 0 auto 1rem auto;
+}
+
+.closing-friends-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(30, 75, 110, 0.18));
+}
+
+.closing-watermark {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #7c97b0;
+  letter-spacing: 0.04em;
+  margin-top: 0.35rem;
+}
+
+/* ==========================================================================
+   9. PIE DE PÁGINA BIZFLOW, BOTÓN FLOTANTE Y LIGHTBOX
+   ========================================================================== */
+.bizflow-footer {
+  width: 100%;
+  background: linear-gradient(180deg, #173b57 0%, #102a3f 100%);
+  border-top: 2px solid rgba(226, 186, 125, 0.45);
+  padding: 1rem 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  position: relative;
+  z-index: 10;
+}
+
+.floating-music-btn {
+  position: fixed;
+  bottom: 5.5rem;
+  right: 0.85rem;
+  z-index: 150;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff 0%, #ebd9c1 100%);
+  border: 2.5px solid var(--disney-tan);
+  box-shadow: 0 8px 20px rgba(30, 75, 110, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.42rem;
+  cursor: pointer;
+}
+
+.floating-music-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* Visor Lightbox */
+#gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  background: rgba(15, 36, 54, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+#lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1.5px solid #ffffff;
+  color: #ffffff;
+  font-size: 1.8rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#lightbox-img {
+  max-width: 92vw;
+  max-height: 82vh;
+  border-radius: 1.5rem;
+  border: 4px solid #ffffff;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  object-fit: contain;
+}

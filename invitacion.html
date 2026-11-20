@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" content="#8fc1e3" />
+  <title>Invitación Jackson - ¡El Cumpleaños Más Feliz Del Mundo!</title>
+
+  <!-- Google Fonts & Tipografía Inspirada en Disney -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&amp;family=Fredoka:wght@400;500;600;700&amp;family=Grandstander:wght@400;600;700;800&amp;family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&amp;family=Quicksand:wght@500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/waltograph" rel="stylesheet" />
+
+  <!-- Hojas de Estilos Modulares -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/envelope.css" />
+  <link rel="stylesheet" href="css/invitation.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+
+  <!-- ====================================================================
+       CONTENEDOR PRINCIPAL DE LA INVITACIÓN (VISTA DIRECTA SIN SOBRE)
+       ==================================================================== -->
+  <main class="main-invitation-container" role="main">
+
+    <!-- Resplandor y nubes suaves del fondo -->
+    <div class="bg-glow-top" aria-hidden="true"></div>
+    <div class="ambient-smoke-layer" aria-hidden="true">
+      <div class="ambient-cloud cloud-1"></div>
+      <div class="ambient-cloud cloud-2"></div>
+      <div class="ambient-cloud cloud-3"></div>
+      <div class="ambient-cloud cloud-4"></div>
+      <div class="ambient-cloud cloud-5"></div>
+      <div class="ambient-cloud cloud-6"></div>
+    </div>
+
+    <!-- Siluetas doradas de Mickey (sirueta_,mikey.png) flotando en el fondo -->
+    <div class="floating-bg-decor" aria-hidden="true">
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-1" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-2" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-3" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-4" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-5" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-6" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-7" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-8" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-9" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-10" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-11" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-12" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-13" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-14" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-15" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-16" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-17" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-18" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-19" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-20" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-21" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-22" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-23" />
+      <img src="iconos/sirueta_,mikey.png" alt="" class="bg-float-mickey pos-24" />
+    </div>
+
+    <!-- BARRA SUPERIOR Y CONTROL DE MÚSICA CON OREJAS DE MICKEY -->
+    <header class="top-music-header" data-purpose="top-header">
+      <button id="music-toggle-btn" type="button" class="mickey-music-btn"
+        aria-label="Reproducir o pausar música de cumpleaños" title="Música incluida">
+        <span class="mickey-ear-left" aria-hidden="true"></span>
+        <span class="mickey-ear-right" aria-hidden="true"></span>
+        <svg class="mickey-music-note-svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"></path>
+        </svg>
+      </button>
+
+      <div class="music-notice-tag">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"></path>
+        </svg>
+        <span id="music-status-text">Música incluida</span>
+      </div>
+    </header>
+
+    <!-- 1. SECCIÓN HERO MÁGICO: CASTILLO DISNEY, FUEGOS ARTIFICIALES, MIKEY_INICIO Y BANDERINES -->
+    <section class="hero-section" data-purpose="hero-section">
+      <div class="castle-stage">
+        <div class="firework-burst fw-left sparkle-pulse" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none">
+            <g stroke="#d7b476" stroke-width="2.2" stroke-linecap="round">
+              <line x1="50" y1="6" x2="50" y2="94" />
+              <line x1="6" y1="50" x2="94" y2="50" />
+              <line x1="18" y1="18" x2="82" y2="82" />
+              <line x1="82" y1="18" x2="18" y2="82" />
+              <line x1="50" y1="20" x2="64" y2="8" />
+              <line x1="50" y1="20" x2="36" y2="8" />
+              <line x1="80" y1="50" x2="92" y2="36" />
+              <line x1="80" y1="50" x2="92" y2="64" />
+              <line x1="20" y1="50" x2="8" y2="36" />
+              <line x1="20" y1="50" x2="8" y2="64" />
+            </g>
+            <circle cx="50" cy="50" r="6" fill="#e6c88e" />
+          </svg>
+        </div>
+
+        <div class="firework-burst fw-right sparkle-pulse" style="animation-delay: 1.2s;" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none">
+            <g stroke="#d7b476" stroke-width="2.2" stroke-linecap="round">
+              <line x1="50" y1="6" x2="50" y2="94" />
+              <line x1="6" y1="50" x2="94" y2="50" />
+              <line x1="18" y1="18" x2="82" y2="82" />
+              <line x1="82" y1="18" x2="18" y2="82" />
+              <line x1="50" y1="20" x2="64" y2="8" />
+              <line x1="50" y1="20" x2="36" y2="8" />
+              <line x1="80" y1="50" x2="92" y2="36" />
+              <line x1="80" y1="50" x2="92" y2="64" />
+              <line x1="20" y1="50" x2="8" y2="36" />
+              <line x1="20" y1="50" x2="8" y2="64" />
+            </g>
+            <circle cx="50" cy="50" r="6" fill="#e6c88e" />
+          </svg>
+        </div>
+
+        <div class="castle-svg-wrap" aria-hidden="true">
+          <svg class="castle-svg" viewBox="0 0 240 245" fill="none">
+            <line x1="120" y1="6" x2="120" y2="25" stroke="#c59b62" stroke-width="2.5" />
+            <path d="M120 8L134 12L120 16Z" fill="#8fc1e3" />
+            <polygon points="120,20 111,68 129,68" fill="#8fc1e3" stroke="#c59b62" stroke-width="1.5" />
+            <rect x="112" y="68" width="16" height="34" fill="#ead4b2" stroke="#c59b62" stroke-width="1.5" />
+
+            <line x1="84" y1="42" x2="84" y2="54" stroke="#c59b62" stroke-width="2" />
+            <path d="M84 43L94 46L84 49Z" fill="#8fc1e3" />
+            <polygon points="84,52 74,90 94,90" fill="#9ec5e8" stroke="#c59b62" stroke-width="1.5" />
+            <rect x="76" y="90" width="16" height="45" fill="#f3e2c7" stroke="#c59b62" stroke-width="1.5" />
+
+            <line x1="156" y1="42" x2="156" y2="54" stroke="#c59b62" stroke-width="2" />
+            <path d="M156 43L166 46L156 49Z" fill="#8fc1e3" />
+            <polygon points="156,52 146,90 166,90" fill="#9ec5e8" stroke="#c59b62" stroke-width="1.5" />
+            <rect x="148" y="90" width="16" height="45" fill="#f3e2c7" stroke="#c59b62" stroke-width="1.5" />
+
+            <polygon points="56,92 46,125 66,125" fill="#8fc1e3" stroke="#c59b62" stroke-width="1.5" />
+            <rect x="48" y="125" width="16" height="72" fill="#e5c89e" stroke="#c59b62" stroke-width="1.5" />
+
+            <polygon points="184,92 174,125 194,125" fill="#8fc1e3" stroke="#c59b62" stroke-width="1.5" />
+            <rect x="176" y="125" width="16" height="72" fill="#e5c89e" stroke="#c59b62" stroke-width="1.5" />
+
+            <polygon points="120,76 92,122 148,122" fill="#8fc1e3" stroke="#c59b62" stroke-width="1.6" />
+
+            <rect x="64" y="122" width="112" height="82" fill="#ebd3ae" stroke="#c59b62" stroke-width="1.6" />
+            <path
+              d="M42,155 L42,215 L198,215 L198,155 L188,155 L188,165 L178,165 L178,155 L166,155 L166,165 L154,165 L154,155 L142,155 L142,165 L130,165 L130,155 L110,155 L110,165 L98,165 L98,155 L86,155 L86,165 L74,165 L74,155 L62,155 L62,165 L52,165 L52,155 Z"
+              fill="#dec094" stroke="#c59b62" stroke-width="1.6" />
+
+            <circle cx="120" cy="142" r="10" fill="#fffdf9" stroke="#c59b62" stroke-width="2" />
+            <path d="M102,215 A18,22 0 0 1 138,215 Z" fill="#9ec5e8" stroke="#c59b62" stroke-width="2" />
+
+            <rect x="81" y="132" width="7" height="14" rx="3.5" fill="#ffffff" />
+            <rect x="152" y="132" width="7" height="14" rx="3.5" fill="#ffffff" />
+            <rect x="53" y="172" width="7" height="14" rx="3.5" fill="#ffffff" />
+            <rect x="180" y="172" width="7" height="14" rx="3.5" fill="#ffffff" />
+          </svg>
+        </div>
+      </div>
+
+      <h1 class="happiest-title">¡El Más Feliz</h1>
+
+      <div class="hero-characters-row" data-purpose="disney-character-row">
+        <svg class="castle-side-flag" viewBox="0 0 32 48" fill="none" aria-hidden="true">
+          <line x1="6" y1="6" x2="6" y2="46" stroke="#c59b62" stroke-width="2.5" stroke-linecap="round" />
+          <circle cx="6" cy="5" r="2.5" fill="#c59b62" />
+          <path d="M7 8L28 13L7 19Z" fill="#9ec5e8" />
+        </svg>
+
+        <img src="img/mikey_inicio.png" alt="Mickey, Minnie, Goofy, Donald, Daisy y Pluto"
+          class="hero-mikey-group-img" />
+
+        <svg class="castle-side-flag" viewBox="0 0 32 48" fill="none" aria-hidden="true">
+          <line x1="26" y1="6" x2="26" y2="46" stroke="#c59b62" stroke-width="2.5" stroke-linecap="round" />
+          <circle cx="26" cy="5" r="2.5" fill="#c59b62" />
+          <path d="M25 8L4 13L25 19Z" fill="#9ec5e8" />
+        </svg>
+      </div>
+
+      <div class="birthday-castle-banners" data-purpose="birthday-banner-blocks" aria-label="Cumpleaños">
+        <div class="castle-letter-block tone-dark">C</div>
+        <div class="castle-letter-block tone-light">u</div>
+        <div class="castle-letter-block tone-dark">m</div>
+        <div class="castle-letter-block tone-light">p</div>
+        <div class="castle-letter-block tone-dark">l</div>
+        <div class="castle-letter-block tone-light">e</div>
+        <div class="castle-letter-block tone-dark">a</div>
+        <div class="castle-letter-block tone-light">ñ</div>
+        <div class="castle-letter-block tone-dark">o</div>
+        <div class="castle-letter-block tone-light">s</div>
+      </div>
+
+      <div class="on-earth-ribbon-stage">
+        <h2 class="on-earth-title">Del Mundo!</h2>
+
+        <div class="ribbon-characters-wrap">
+          <img src="img/Mikey_Mouse.png" alt="Mickey Mouse" class="ribbon-char-left" />
+
+          <div class="celebrate-gold-ribbon">
+            <img src="iconos/sirueta_,mikey.png" alt="" class="ribbon-mickey-pin" aria-hidden="true" />
+            <span class="celebrate-ribbon-text">¡Acompáñanos a celebrar!</span>
+            <img src="iconos/sirueta_,mikey.png" alt="" class="ribbon-mickey-pin" aria-hidden="true" />
+          </div>
+
+          <img src="img/mickey_pastel.png" alt="Mickey con pastel de cumpleaños" class="ribbon-char-right" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SECCIÓN LLAMADO DEL FESTEJADO: JACKSON CUMPLE 5 AÑITOS -->
+    <section class="kid-callout-section" data-purpose="boy-hero-name">
+      <div class="mickey-balloon-decor balloon-left balloon-float" aria-hidden="true">
+        <svg class="mickey-balloon-svg" viewBox="0 0 70 96" fill="none">
+          <circle cx="35" cy="34" r="21" fill="#ffffff" stroke="#5b87a8" stroke-width="1.5" />
+          <circle cx="19" cy="20" r="10" fill="#b8ddf7" />
+          <circle cx="51" cy="20" r="10" fill="#b8ddf7" />
+          <circle cx="35" cy="35" r="15" fill="#b8ddf7" />
+          <path d="M35 55 Q31 72 38 92" stroke="#8da6ba" stroke-width="1.5" fill="none" />
+        </svg>
+      </div>
+
+      <div class="mickey-balloon-decor balloon-right balloon-float" aria-hidden="true">
+        <svg class="mickey-balloon-svg" viewBox="0 0 70 96" fill="none">
+          <circle cx="35" cy="34" r="21" fill="#ffffff" stroke="#5b87a8" stroke-width="1.5" />
+          <circle cx="19" cy="20" r="10" fill="#9ec5e8" />
+          <circle cx="51" cy="20" r="10" fill="#9ec5e8" />
+          <circle cx="35" cy="35" r="15" fill="#9ec5e8" />
+          <path d="M35 55 Q39 72 32 92" stroke="#8da6ba" stroke-width="1.5" fill="none" />
+        </svg>
+      </div>
+
+      <h3 class="kid-disney-name">Jackson</h3>
+      <p class="kid-disney-age">cumple 5 añitos</p>
+    </section>
+
+    <!-- 3. SECCIÓN FECHA, HORA Y UBICACIÓN -->
+    <section class="event-details-section" data-purpose="event-details-card">
+      <div class="event-details-card">
+        <p class="event-month-label">Noviembre</p>
+
+        <div class="event-date-row">
+          <span class="event-day-name">Sábado</span>
+          <span class="event-day-number">20</span>
+          <span class="event-time-text">A las 3:00 PM</span>
+        </div>
+
+        <div class="event-address-block">
+          <p class="venue-title">125 Willow Lane,</p>
+          <p>Rosewood, CA 90210</p>
+        </div>
+
+        <a id="check-location-btn" class="disney-tan-pill-btn"
+          href="https://maps.google.com/?q=125+Willow+Lane+Rosewood+CA+90210" target="_blank"
+          rel="noopener noreferrer">
+          <span>Ver Ubicación</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 4. SECCIÓN CUENTA REGRESIVA CON ARCO MÁGICO, PLUTO Y GOOFY -->
+    <section class="countdown-section" data-purpose="countdown-section">
+      <div class="curved-phrase-wrap">
+        <svg class="curved-phrase-svg" viewBox="0 0 360 72">
+          <defs>
+            <path id="magic-arc-path" d="M 18,62 A 175,115 0 0,1 342,62" />
+          </defs>
+          <text class="curved-phrase-text" text-anchor="middle">
+            <textPath href="#magic-arc-path" startOffset="50%">
+              ¡No podemos esperar para celebrar la magia contigo!
+            </textPath>
+          </text>
+        </svg>
+      </div>
+
+      <div class="countdown-top-flags" aria-hidden="true">
+        <svg class="mini-castle-flag" viewBox="0 0 28 38" fill="none">
+          <line x1="14" y1="6" x2="14" y2="36" stroke="#c59b62" stroke-width="2" />
+          <path d="M14 7L4 12L14 17Z" fill="#9ec5e8" />
+        </svg>
+        <svg class="mini-castle-flag" viewBox="0 0 28 38" fill="none">
+          <line x1="14" y1="2" x2="14" y2="36" stroke="#c59b62" stroke-width="2" />
+          <path d="M14 3L25 8L14 13Z" fill="#8fc1e3" />
+        </svg>
+        <svg class="mini-castle-flag" viewBox="0 0 28 38" fill="none">
+          <line x1="14" y1="6" x2="14" y2="36" stroke="#c59b62" stroke-width="2" />
+          <path d="M14 7L24 12L14 17Z" fill="#9ec5e8" />
+        </svg>
+      </div>
+
+      <div class="mickey-countdown-pod">
+        <div class="countdown-mickey-crest">
+          <img src="iconos/sirueta_,mikey_2.png" alt="Emblema Mickey" />
+        </div>
+
+        <div class="countdown-clock-grid" id="countdown-clock">
+          <div class="countdown-unit">
+            <span class="countdown-digit" id="countdown-days">159</span>
+            <span class="countdown-unit-label">Días</span>
+          </div>
+          <span class="countdown-colon">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-digit" id="countdown-hours">08</span>
+            <span class="countdown-unit-label">Horas</span>
+          </div>
+          <span class="countdown-colon">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-digit" id="countdown-minutes">40</span>
+            <span class="countdown-unit-label">Min</span>
+          </div>
+          <span class="countdown-colon">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-digit" id="countdown-seconds">55</span>
+            <span class="countdown-unit-label">Seg</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="countdown-mascots-row">
+        <img src="img/pluto.png" alt="Pluto" class="countdown-pluto-img" />
+        <img src="img/gufi.png" alt="Goofy" class="countdown-goofy-img" />
+      </div>
+    </section>
+
+    <!-- 5. SECCIÓN MESA DE REGALOS + RUEDA DE LA FORTUNA DE MICKEY -->
+    <section class="gift-registry-section" data-purpose="gift-registry">
+      <div class="gift-registry-card">
+        <div class="registry-title-row">
+          <img src="iconos/sirueta_,mikey.png" alt="" class="pill-mickey-icon" aria-hidden="true" />
+          <h4 class="registry-heading">Mesa de Regalos</h4>
+          <img src="iconos/sirueta_,mikey.png" alt="" class="pill-mickey-icon" aria-hidden="true" />
+        </div>
+
+        <p class="registry-description">
+          Tu presencia y cariño son el mejor regalo de todos. Si deseas hacernos llegar un detalle especial, puedes
+          consultar nuestra lista de regalos aquí:
+        </p>
+
+        <a id="registry-link-btn" class="disney-tan-pill-btn" href="#rsvp-section">
+          <span>Lista de Regalos</span>
+        </a>
+
+        <div class="ferris-wheel-stage">
+          <div class="ferris-wheel-container">
+            <svg class="ferris-wheel-svg" viewBox="0 0 120 120" fill="none">
+              <g class="ferris-wheel-spin">
+                <circle cx="60" cy="60" r="48" stroke="#d5b485" stroke-width="2.2" />
+                <circle cx="60" cy="60" r="38" stroke="#e5cba3" stroke-width="1.4" stroke-dasharray="3 3" />
+                <line x1="60" y1="12" x2="60" y2="108" stroke="#cca16b" stroke-width="1.6" />
+                <line x1="12" y1="60" x2="108" y2="60" stroke="#cca16b" stroke-width="1.6" />
+                <line x1="26" y1="26" x2="94" y2="94" stroke="#cca16b" stroke-width="1.6" />
+                <line x1="26" y1="94" x2="94" y2="26" stroke="#cca16b" stroke-width="1.6" />
+                <circle cx="60" cy="12" r="5.5" fill="#9ec5e8" stroke="#ffffff" stroke-width="1.5" />
+                <circle cx="60" cy="108" r="5.5" fill="#f7b7d2" stroke="#ffffff" stroke-width="1.5" />
+                <circle cx="12" cy="60" r="5.5" fill="#fbe094" stroke="#ffffff" stroke-width="1.5" />
+                <circle cx="108" cy="60" r="5.5" fill="#b4dfb6" stroke="#ffffff" stroke-width="1.5" />
+                <circle cx="26" cy="26" r="5.5" fill="#f9cba0" stroke="#ffffff" stroke-width="1.5" />
+                <circle cx="94" cy="94" r="5.5" fill="#d5b8e8" stroke="#ffffff" stroke-width="1.5" />
+                <circle cx="26" cy="94" r="5.5" fill="#98dce8" stroke="#ffffff" stroke-width="1.5" />
+                <circle cx="94" cy="26" r="5.5" fill="#f7b3a1" stroke="#ffffff" stroke-width="1.5" />
+              </g>
+            </svg>
+
+            <div class="ferris-mickey-hub">
+              <img src="img/Mikey_Mouse.png" alt="Mickey Mouse" class="ferris-mickey-face-img" />
+            </div>
+          </div>
+
+          <svg class="ferris-wheel-stand" viewBox="0 0 120 36" fill="none" aria-hidden="true">
+            <path d="M32 32L52 2H68L88 32" stroke="#c89f65" stroke-width="4" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <rect x="20" y="30" width="80" height="5" rx="2.5" fill="#c89f65" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SECCIÓN PORTARRETRATO CON OREJAS DE MICKEY -->
+    <section class="mickey-photo-section" data-purpose="mickey-photo-frame">
+      <div class="mickey-ears-frame-stage mickey-photo-trigger" title="Toca para ampliar la foto de Jackson">
+        <div class="frame-mickey-ear ear-left" aria-hidden="true"></div>
+        <div class="frame-mickey-ear ear-right" aria-hidden="true"></div>
+
+        <div class="frame-mickey-circle">
+          <div class="frame-photo-inner">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEoAjTlgX4OOt7X9MOlhdODelRA9xIOdTzOBbbGWCdO21lCwxEdAkzDvuFs1E1ggf0Qwqj3SxtGJ6eJrwb8URLB3e8M2lS9nilD0fvEjGejNBOglqYMIRMR2-pq_sQ3mdYLj6WAlje2nwoJb4g1rE_vm_3yA7_n35PgVOCPyqevVFZ11EQFV7qzdSZiSeiqRYY960OfhdvTvZt3dtyYklCRkCHu_yWl6864rPoCXY"
+              alt="Jackson sonriendo en su cumpleaños" class="mickey-portrait-img" loading="lazy" />
+          </div>
+        </div>
+      </div>
+      <span class="photo-caption-hint">✨ Toca la foto para ampliarla ✨</span>
+    </section>
+
+    <!-- 7. SECCIÓN RSVP -->
+    <section class="rsvp-section" id="rsvp-section" data-purpose="rsvp-form-container">
+      <div class="rsvp-top-banner">
+        <img src="img/mikey_pato.png" alt="Mickey y Donald" class="rsvp-char-group-img" />
+
+        <div class="rsvp-header-center">
+          <h4 class="rsvp-disney-title">RSVP</h4>
+          <p class="rsvp-deadline-sub">Confirma antes del 15 de Octubre</p>
+        </div>
+
+        <img src="img/mickey_pluto_pastel.png" alt="Mickey y Pluto con pastel" class="rsvp-char-group-img" />
+      </div>
+
+      <div class="rsvp-card-outer">
+        <div class="rsvp-card-inner">
+          <form id="rsvp-form" class="rsvp-form" data-purpose="rsvp-inputs">
+            <div class="rsvp-field-group">
+              <label class="rsvp-field-label" for="guest-name">
+                Tu nombre <span class="req-star">*</span>
+              </label>
+              <input id="guest-name" name="guest_name" type="text" class="rsvp-input"
+                placeholder="Ej. Tía Sara y familia" required="" />
+            </div>
+
+            <div class="rsvp-field-group">
+              <label class="rsvp-field-label">
+                ¿Nos acompañarás? <span class="req-star">*</span>
+              </label>
+              <div class="rsvp-radio-list">
+                <label class="rsvp-radio-option">
+                  <input type="radio" name="attending" value="si" checked="" required="" />
+                  <span>¡Sí! Ahí estaré para celebrar</span>
+                </label>
+                <label class="rsvp-radio-option">
+                  <input type="radio" name="attending" value="no" />
+                  <span>No podré asistir esta vez.</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="rsvp-field-group">
+              <label class="rsvp-field-label" for="guest-phone">
+                Por favor comparte tu número de teléfono por si necesitamos enviarte actualizaciones
+              </label>
+              <input id="guest-phone" name="phone_number" type="tel" class="rsvp-input"
+                placeholder="(555) 000-0000" />
+            </div>
+
+            <div class="rsvp-field-group">
+              <label class="rsvp-field-label" for="guest-message">
+                Mensaje o felicitación para Jackson (opcional)
+              </label>
+              <textarea id="guest-message" class="rsvp-textarea" rows="2"
+                placeholder="¡Feliz cumpleaños Jackson!"></textarea>
+            </div>
+
+            <button id="whatsapp-rsvp-btn" type="submit" class="disney-submit-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12.031 2C6.502 2 2.012 6.486 2.012 12.01c0 1.908.535 3.712 1.547 5.275L2 22l4.89-1.523c1.51.874 3.242 1.34 5.141 1.34 5.529 0 10.02-4.486 10.02-10.007C22.051 6.486 17.56 2 12.031 2zm5.786 14.288c-.244.686-1.42 1.31-1.956 1.374-.51.06-1.156.09-3.71-.97-3.266-1.353-5.344-4.66-5.508-4.877-.162-.218-1.317-1.753-1.317-3.344 0-1.59.833-2.373 1.13-2.695.297-.322.65-.403.868-.403.218 0 .436.002.628.012.203.01.474-.078.74.56.27.65.922 2.253 1.003 2.417.081.163.136.353.027.57-.109.217-.163.353-.326.543-.163.19-.344.425-.49.57-.164.164-.334.343-.144.668.19.327.846 1.393 1.814 2.255 1.246 1.109 2.296 1.453 2.623 1.616.326.163.517.136.707-.082.19-.217.815-.95 1.033-1.276.217-.326.435-.272.733-.163.298.109 1.897.896 2.223 1.06.326.163.543.244.624.38.082.136.082.788-.162 1.474z">
+                </path>
+              </svg>
+              <span>Confirmar Asistencia</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SECCIÓN DE CIERRE -->
+    <section class="closing-section" data-purpose="page-footer">
+      <h5 class="see-you-soon-title">¡Te Esperamos!</h5>
+      <p class="closing-date-label">20 de Noviembre de 2026</p>
+
+      <div class="closing-friends-wrapper">
+        <img src="img/mikey_final.png" alt="Mickey, Minnie, Goofy, Donald, Daisy y Pluto celebrando"
+          class="closing-friends-img" />
+      </div>
+
+      <p class="closing-watermark">
+        Creado con magia para la celebración del 5º Cumpleaños de Jackson
+      </p>
+    </section>
+
+    <!-- PIE DE PÁGINA BIZFLOW -->
+    <footer class="bizflow-footer" aria-label="BizFlow">
+      <a href="https://wa.me/?text=Hola%20BizFlow%2C%20quisiera%20cotizar%20una%20invitaci%C3%B3n%20digital"
+        target="_blank" rel="noopener noreferrer" title="BizFlow" style="display: inline-block;">
+        <img src="img/Bizflow_logo.png" alt="BizFlow"
+          style="height: 22px; width: auto; max-width: 125px; object-fit: contain; display: block; opacity: 0.94;" />
+      </a>
+
+      <div
+        style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; flex-wrap: wrap; font-family: var(--font-friendly); font-size: 0.8rem; color: rgba(255, 255, 255, 0.92);">
+        <span>¿Quieres una invitación como esta?</span>
+        <a href="https://wa.me/?text=Hola%20BizFlow%2C%20quisiera%20cotizar%20una%20invitaci%C3%B3n%20digital"
+          target="_blank" rel="noopener noreferrer"
+          style="font-weight: 700; font-size: 0.78rem; color: #ebd9c1; text-decoration: underline;">
+          <span>Contáctanos</span>
+        </a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Botón Flotante de Música -->
+  <button id="floating-music-btn" class="floating-music-btn is-paused" type="button"
+    aria-label="Pausar o reproducir música" title="Reproducir música">
+    <img src="iconos/music.gif" alt="Música de cumpleaños" />
+  </button>
+  <audio id="wedding-music" preload="auto" loop>
+    <source src="music/cancion_boda.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Visor Lightbox para la Foto de Jackson -->
+  <div id="gallery-lightbox" class="hidden" role="dialog" aria-modal="true" aria-label="Visualizador de foto">
+    <button id="lightbox-close" type="button" aria-label="Cerrar visor">&times;</button>
+    <img id="lightbox-img" src="" alt="Jackson - Cumpleaños Nº 5" />
+  </div>
+
+  <!-- Toast Notification Flotante -->
+  <div id="copy-toast" class="toast-notification" role="status" aria-live="polite">
+    <span>✨ ¡Confirmación lista!</span>
+  </div>
+
+  <!-- Scripts Modulares -->
+  <script src="js/config.js"></script>
+  <script src="js/envelope.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/music.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/rsvp.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/invitation.js"></script>
+</body>
+
+</html>
