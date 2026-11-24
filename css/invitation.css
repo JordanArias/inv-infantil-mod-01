@@ -108,6 +108,7 @@
   0% {
     transform: translateY(0px) scale(1);
   }
+
   100% {
     transform: translateY(-14px) scale(1.05);
   }
@@ -142,9 +143,11 @@
     transform: translateY(0px) translateX(0px) rotate(-10deg) scale(0.94);
     opacity: 0.17;
   }
+
   50% {
     opacity: 0.28;
   }
+
   100% {
     transform: translateY(-15px) translateX(5px) rotate(10deg) scale(1.06);
     opacity: 0.22;
@@ -152,30 +155,197 @@
 }
 
 /* 24 posiciones distribuidas en los márgenes para acompañar todo el recorrido */
-.bg-float-mickey.pos-1  { top: 1.5%;  left: 3.5%;  width: 28px; animation-duration: 6.4s; animation-delay: -0.6s; }
-.bg-float-mickey.pos-2  { top: 3.2%;  right: 4%;   width: 34px; animation-duration: 7.4s; animation-delay: -2.1s; }
-.bg-float-mickey.pos-3  { top: 7.5%;  left: 2.5%;  width: 24px; animation-duration: 6.8s; animation-delay: -1.5s; }
-.bg-float-mickey.pos-4  { top: 9.4%;  right: 3%;   width: 28px; animation-duration: 8.0s; animation-delay: -3.4s; }
-.bg-float-mickey.pos-5  { top: 14.2%; left: 4%;    width: 32px; animation-duration: 7.2s; animation-delay: -0.8s; }
-.bg-float-mickey.pos-6  { top: 16.5%; right: 3.5%; width: 26px; animation-duration: 6.6s; animation-delay: -4.0s; }
-.bg-float-mickey.pos-7  { top: 21.8%; left: 2.8%;  width: 30px; animation-duration: 7.6s; animation-delay: -2.3s; }
-.bg-float-mickey.pos-8  { top: 24.5%; right: 2.8%; width: 34px; animation-duration: 6.9s; animation-delay: -1.2s; }
-.bg-float-mickey.pos-9  { top: 29.5%; left: 3.5%;  width: 25px; animation-duration: 7.5s; animation-delay: -3.0s; }
-.bg-float-mickey.pos-10 { top: 33.2%; right: 4%;   width: 29px; animation-duration: 7.1s; animation-delay: -1.7s; }
-.bg-float-mickey.pos-11 { top: 38.4%; left: 2.5%;  width: 33px; animation-duration: 7.9s; animation-delay: -4.5s; }
-.bg-float-mickey.pos-12 { top: 42.0%; right: 2.5%; width: 27px; animation-duration: 6.7s; animation-delay: -2.6s; }
-.bg-float-mickey.pos-13 { top: 47.2%; left: 3.5%;  width: 30px; animation-duration: 7.8s; animation-delay: -0.9s; }
-.bg-float-mickey.pos-14 { top: 51.5%; right: 3.5%; width: 35px; animation-duration: 7.3s; animation-delay: -3.8s; }
-.bg-float-mickey.pos-15 { top: 56.4%; left: 2.2%;  width: 26px; animation-duration: 7.6s; animation-delay: -2.0s; }
-.bg-float-mickey.pos-16 { top: 60.8%; right: 2.8%; width: 31px; animation-duration: 6.8s; animation-delay: -4.1s; }
-.bg-float-mickey.pos-17 { top: 65.5%; left: 4%;    width: 28px; animation-duration: 8.1s; animation-delay: -1.1s; }
-.bg-float-mickey.pos-18 { top: 70.0%; right: 3.5%; width: 33px; animation-duration: 6.5s; animation-delay: -3.2s; }
-.bg-float-mickey.pos-19 { top: 74.8%; left: 2.5%;  width: 30px; animation-duration: 7.4s; animation-delay: -1.9s; }
-.bg-float-mickey.pos-20 { top: 79.2%; right: 2.5%; width: 26px; animation-duration: 7.7s; animation-delay: -4.3s; }
-.bg-float-mickey.pos-21 { top: 84.0%; left: 3.5%;  width: 34px; animation-duration: 6.9s; animation-delay: -1.4s; }
-.bg-float-mickey.pos-22 { top: 88.5%; right: 4%;   width: 29px; animation-duration: 7.6s; animation-delay: -3.5s; }
-.bg-float-mickey.pos-23 { top: 93.0%; left: 4%;    width: 27px; animation-duration: 7.1s; animation-delay: -0.7s; }
-.bg-float-mickey.pos-24 { top: 96.2%; right: 4%;   width: 32px; animation-duration: 8.2s; animation-delay: -2.8s; }
+.bg-float-mickey.pos-1 {
+  top: 1.5%;
+  left: 3.5%;
+  width: 28px;
+  animation-duration: 6.4s;
+  animation-delay: -0.6s;
+}
+
+.bg-float-mickey.pos-2 {
+  top: 3.2%;
+  right: 4%;
+  width: 34px;
+  animation-duration: 7.4s;
+  animation-delay: -2.1s;
+}
+
+.bg-float-mickey.pos-3 {
+  top: 7.5%;
+  left: 2.5%;
+  width: 24px;
+  animation-duration: 6.8s;
+  animation-delay: -1.5s;
+}
+
+.bg-float-mickey.pos-4 {
+  top: 9.4%;
+  right: 3%;
+  width: 28px;
+  animation-duration: 8.0s;
+  animation-delay: -3.4s;
+}
+
+.bg-float-mickey.pos-5 {
+  top: 14.2%;
+  left: 4%;
+  width: 32px;
+  animation-duration: 7.2s;
+  animation-delay: -0.8s;
+}
+
+.bg-float-mickey.pos-6 {
+  top: 16.5%;
+  right: 3.5%;
+  width: 26px;
+  animation-duration: 6.6s;
+  animation-delay: -4.0s;
+}
+
+.bg-float-mickey.pos-7 {
+  top: 21.8%;
+  left: 2.8%;
+  width: 30px;
+  animation-duration: 7.6s;
+  animation-delay: -2.3s;
+}
+
+.bg-float-mickey.pos-8 {
+  top: 24.5%;
+  right: 2.8%;
+  width: 34px;
+  animation-duration: 6.9s;
+  animation-delay: -1.2s;
+}
+
+.bg-float-mickey.pos-9 {
+  top: 29.5%;
+  left: 3.5%;
+  width: 25px;
+  animation-duration: 7.5s;
+  animation-delay: -3.0s;
+}
+
+.bg-float-mickey.pos-10 {
+  top: 33.2%;
+  right: 4%;
+  width: 29px;
+  animation-duration: 7.1s;
+  animation-delay: -1.7s;
+}
+
+.bg-float-mickey.pos-11 {
+  top: 38.4%;
+  left: 2.5%;
+  width: 33px;
+  animation-duration: 7.9s;
+  animation-delay: -4.5s;
+}
+
+.bg-float-mickey.pos-12 {
+  top: 42.0%;
+  right: 2.5%;
+  width: 27px;
+  animation-duration: 6.7s;
+  animation-delay: -2.6s;
+}
+
+.bg-float-mickey.pos-13 {
+  top: 47.2%;
+  left: 3.5%;
+  width: 30px;
+  animation-duration: 7.8s;
+  animation-delay: -0.9s;
+}
+
+.bg-float-mickey.pos-14 {
+  top: 51.5%;
+  right: 3.5%;
+  width: 35px;
+  animation-duration: 7.3s;
+  animation-delay: -3.8s;
+}
+
+.bg-float-mickey.pos-15 {
+  top: 56.4%;
+  left: 2.2%;
+  width: 26px;
+  animation-duration: 7.6s;
+  animation-delay: -2.0s;
+}
+
+.bg-float-mickey.pos-16 {
+  top: 60.8%;
+  right: 2.8%;
+  width: 31px;
+  animation-duration: 6.8s;
+  animation-delay: -4.1s;
+}
+
+.bg-float-mickey.pos-17 {
+  top: 65.5%;
+  left: 4%;
+  width: 28px;
+  animation-duration: 8.1s;
+  animation-delay: -1.1s;
+}
+
+.bg-float-mickey.pos-18 {
+  top: 70.0%;
+  right: 3.5%;
+  width: 33px;
+  animation-duration: 6.5s;
+  animation-delay: -3.2s;
+}
+
+.bg-float-mickey.pos-19 {
+  top: 74.8%;
+  left: 2.5%;
+  width: 30px;
+  animation-duration: 7.4s;
+  animation-delay: -1.9s;
+}
+
+.bg-float-mickey.pos-20 {
+  top: 79.2%;
+  right: 2.5%;
+  width: 26px;
+  animation-duration: 7.7s;
+  animation-delay: -4.3s;
+}
+
+.bg-float-mickey.pos-21 {
+  top: 84.0%;
+  left: 3.5%;
+  width: 34px;
+  animation-duration: 6.9s;
+  animation-delay: -1.4s;
+}
+
+.bg-float-mickey.pos-22 {
+  top: 88.5%;
+  right: 4%;
+  width: 29px;
+  animation-duration: 7.6s;
+  animation-delay: -3.5s;
+}
+
+.bg-float-mickey.pos-23 {
+  top: 93.0%;
+  left: 4%;
+  width: 27px;
+  animation-duration: 7.1s;
+  animation-delay: -0.7s;
+}
+
+.bg-float-mickey.pos-24 {
+  top: 96.2%;
+  right: 4%;
+  width: 32px;
+  animation-duration: 8.2s;
+  animation-delay: -2.8s;
+}
 
 /* ==========================================================================
    BARRA SUPERIOR Y BOTÓN DE MÚSICA CON OREJAS DE MICKEY
@@ -411,11 +581,9 @@
   right: 0;
   height: 6px;
   background: inherit;
-  clip-path: polygon(
-    0% 100%, 0% 0%, 24% 0%, 24% 100%,
-    38% 100%, 38% 0%, 62% 0%, 62% 100%,
-    76% 100%, 76% 0%, 100% 0%, 100% 100%
-  );
+  clip-path: polygon(0% 100%, 0% 0%, 24% 0%, 24% 100%,
+      38% 100%, 38% 0%, 62% 0%, 62% 100%,
+      76% 100%, 76% 0%, 100% 0%, 100% 100%);
 }
 
 .castle-letter-block.tone-dark {
@@ -685,7 +853,7 @@
 .countdown-section {
   width: 100%;
   max-width: 440px;
-  padding: 1.2rem 1.35rem 1.5rem 1.35rem;
+  padding: 5.2rem 1.35rem 1.5rem 1.35rem;
   text-align: center;
   position: relative;
   z-index: 4;
