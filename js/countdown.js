@@ -7,7 +7,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const configDate =
-    window.INVITATION_CONFIG?.fecha?.fechaHoraISO || "2027-04-28T15:00:00";
+    window.INVITATION_CONFIG?.fecha?.fechaHoraISO || "2026-11-24T17:00:00";
   const targetDate = new Date(configDate);
 
   const daysEl =
@@ -19,26 +19,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const secondsEl =
     document.getElementById("countdown-seconds") || document.getElementById("seconds");
 
-  // Respaldo de 159d 08h 40m 55s si la fecha objetivo ya pasó
-  let fallbackTotalSeconds = 159 * 24 * 3600 + 8 * 3600 + 40 * 60 + 55;
+  let intervalId = null;
 
   function updateCountdown() {
     const now = new Date();
-    let diff = targetDate.getTime() - now.getTime();
+    const diff = targetDate.getTime() - now.getTime();
 
-    let days, hours, minutes, seconds;
+    let days = 0,
+      hours = 0,
+      minutes = 0,
+      seconds = 0;
 
     if (diff > 0 && !Number.isNaN(diff)) {
       days = Math.floor(diff / (1000 * 60 * 60 * 24));
       hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       seconds = Math.floor((diff % (1000 * 60)) / 1000);
-    } else {
-      if (fallbackTotalSeconds > 0) fallbackTotalSeconds--;
-      days = Math.floor(fallbackTotalSeconds / (3600 * 24));
-      hours = Math.floor((fallbackTotalSeconds % (3600 * 24)) / 3600);
-      minutes = Math.floor((fallbackTotalSeconds % 3600) / 60);
-      seconds = Math.floor(fallbackTotalSeconds % 60);
+    } else if (intervalId) {
+      clearInterval(intervalId);
     }
 
     const pad = (n) => String(n).padStart(2, "0");
@@ -50,5 +48,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   updateCountdown();
-  setInterval(updateCountdown, 1000);
+  intervalId = setInterval(updateCountdown, 1000);
 });

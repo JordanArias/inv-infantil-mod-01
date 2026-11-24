@@ -15,19 +15,19 @@ const INVITATION_CONFIG = {
     lemaInferior: "Del Mundo!",
     subtituloInvitacion: "¡Acompáñanos a celebrar!",
     fraseMagica: "¡No podemos esperar para celebrar la magia contigo!",
-    fechaCorta: "20.11.2026"
+    fechaCorta: "24.11.2026"
   },
   fecha: {
-    diaSemana: "Sábado",
-    diaNumero: 20,
+    diaSemana: "Martes",
+    diaNumero: 24,
     mesNombre: "Noviembre",
     mesNumero: 11,
     anio: 2026,
-    fechaTexto: "20 de Noviembre de 2026",
-    horaTexto: "A las 3:00 PM",
+    fechaTexto: "24 de Noviembre de 2026",
+    horaTexto: "A las 5:00 PM",
     fechaLimiteRsvp: "15 de Octubre",
     // Fecha y hora en formato ISO para la cuenta regresiva en vivo
-    fechaHoraISO: "2027-04-28T15:00:00"
+    fechaHoraISO: "2026-11-24T17:00:00"
   },
   lugar: {
     titulo: "Ubicación",
